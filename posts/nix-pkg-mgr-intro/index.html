@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Nix package manager intro :: /dev/null — screaming into the void</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Nix is a functional package manager and it has some learning curve. Nix should allow you to install packages (or environments) in parallel which do not interfere with eachother. Installing a package should never be able to break anything on your machine. I hope.
+So I feel like I should just jump in an play with it.
+I&amp;rsquo;ve already installed the Nix pkg manager for macOS from https://nixos.org/nix/ Now what?"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/nix-pkg-mgr-intro/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Nix package manager intro :: /dev/null — screaming into the void" />
+<meta name="twitter:description" content="Nix is a functional package manager and it has some learning curve. Nix should allow you to install packages (or environments) in parallel which do not interfere with eachother. Installing a package should never be able to break anything on your machine. I hope.
+So I feel like I should just jump in an play with it.
+I&amp;rsquo;ve already installed the Nix pkg manager for macOS from https://nixos.org/nix/ Now what?" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Nix package manager intro :: /dev/null — screaming into the void">
+<meta property="og:description" content="Nix is a functional package manager and it has some learning curve. Nix should allow you to install packages (or environments) in parallel which do not interfere with eachother. Installing a package should never be able to break anything on your machine. I hope.
+So I feel like I should just jump in an play with it.
+I&amp;rsquo;ve already installed the Nix pkg manager for macOS from https://nixos.org/nix/ Now what?" />
+<meta property="og:url" content="/posts/nix-pkg-mgr-intro/" />
+<meta property="og:site_name" content="Nix package manager intro" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-03-14 18:37:53 &#43;0100 CET" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">/dev/null</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/nix-pkg-mgr-intro/">Nix package manager intro</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-03-14
+        </span>
+      
+      
+      
+        <span class="post-read-time">— 4 min read</span>
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/nix">nix</a>&nbsp;
+        
+          #<a href="/tags/package-management">package management</a>&nbsp;
+        
+          #<a href="/tags/ops">ops</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p>Nix is a functional package manager and it has some learning curve.
+Nix should allow you to install packages (or environments) in parallel which do not interfere with eachother. Installing a package should never be able to break anything on your machine. I hope.</p>
+
+<p>So I feel like I should just jump in an play with it.</p>
+
+<p>I&rsquo;ve already installed the Nix pkg manager for macOS from <a href="https://nixos.org/nix/">https://nixos.org/nix/</a>
+Now what?</p>
+
+<p>Lets try to install <code>neovim</code> and <code>zsh</code> or something.</p>
+
+<h2 id="the-command-line-interface">The command line interface</h2>
+
+<p>How do we use Nix? There&rsquo;s two different ways to use the package manager.
+As far as I know, the commands named <code>nix-*</code> (example <code>nix-shell</code>) is the old command line interface, where the new, redesigned CLI is all tucked into the <code>nix</code> command.</p>
+
+<p>Lets try to just use <code>nix</code> as much as possible.</p>
+
+<pre><code class="language-bash"># Start of checking the version
+$ nix --version
+nix (Nix) 2.2
+</code></pre>
+
+<pre><code class="language-bash">## Check help
+$ nix --help
+Usage: nix &lt;COMMAND&gt; &lt;FLAGS&gt;... &lt;ARGS&gt;...
+
+Common flags:
+      --debug                  enable debug output
+      --help                   show usage information
+      --help-config            show configuration options
+      --option &lt;NAME&gt; &lt;VALUE&gt;  set a Nix configuration option (overriding nix.conf)
+      --quiet                  decrease verbosity level
+  -v, --verbose                increase verbosity level
+      --version                show version information
+
+In addition, most configuration settings can be overriden using '--&lt;name&gt; &lt;value&gt;'.
+Boolean settings can be overriden using '--&lt;name&gt;' or '--no-&lt;name&gt;'. See 'nix
+--help-config' for a list of configuration settings.
+
+Available commands:
+  add-to-store     add a path to the Nix store
+  build            build a derivation or fetch a store path
+  cat-nar          print the contents of a file inside a NAR file
+  cat-store        print the contents of a store file on stdout
+  copy             copy paths between Nix stores
+  copy-sigs        copy path signatures from substituters (like binary caches)
+  doctor           check your system for potential problems
+  dump-path        dump a store path to stdout (in NAR format)
+  edit             open the Nix expression of a Nix package in $EDITOR
+  eval             evaluate a Nix expression
+  hash-file        print cryptographic hash of a regular file
+  hash-path        print cryptographic hash of the NAR serialisation of a path
+  log              show the build log of the specified packages or paths, if available
+  ls-nar           show information about the contents of a NAR file
+  ls-store         show information about a store path
+  optimise-store   replace identical files in the store by hard links
+  path-info        query information about store paths
+  ping-store       test whether a store can be opened
+  repl             start an interactive environment for evaluating Nix expressions
+  run              run a shell in which the specified packages are available
+  search           query available packages
+  show-config      show the Nix configuration
+  show-derivation  show the contents of a store derivation
+  sign-paths       sign the specified paths
+  to-base16        convert a hash to base-16 representation
+  to-base32        convert a hash to base-32 representation
+  to-base64        convert a hash to base-64 representation
+  to-sri           convert a hash to SRI representation
+  upgrade-nix      upgrade Nix to the latest stable version
+  verify           verify the integrity of store paths
+  why-depends      show why a package has another package in its closure
+
+Note: this program is EXPERIMENTAL and subject to change.
+</code></pre>
+
+<p>Ok, so we see the <code>nix</code> command is experimental - that&rsquo;s fun.</p>
+
+<h2 id="doing-something">Doing something</h2>
+
+<pre><code class="language-shell"># search for neovim, use -u to update sources (equivalent of `apt update`?)
+$ nix search -u neovim
+* nixpkgs.libvterm-neovim (neovim-libvterm)
+  VT220/xterm/ECMA-48 terminal emulator library
+
+* nixpkgs.neovim (neovim)
+  Vim text editor fork focused on extensibility and agility
+
+* nixpkgs.neovim-qt (neovim-qt)
+  Neovim client library and GUI, in Qt5
+
+* nixpkgs.neovim-remote (neovim-remote)
+  A tool that helps controlling nvim processes from a terminal
+
+* nixpkgs.neovim-unwrapped (neovim-unwrapped)
+  Vim text editor fork focused on extensibility and agility
+
+* nixpkgs.python27Packages.pynvim (python2.7-pynvim-0.3.2)
+  Python client for Neovim
+
+* nixpkgs.python37Packages.pynvim (python3.7-pynvim-0.3.2)
+  Python client for Neovim
+</code></pre>
+
+<p>So I&rsquo;m guessing we want <code>nixpkgs.neovim</code>.
+There&rsquo;s no command to install the package, so I guess we have to use <code>nix run</code>?</p>
+
+<pre><code class="language-shell"># lets try nix run
+$ nix run nixpkgs.neovim
+[83 copied (896.8 MiB), 179.3 MiB DL]
+bash-3.2$ # Notice my PS1 has changed, nix has spawned a new shell
+bash-3.2$ which nvim
+/nix/store/4af5536rdz97nrf548zxqgmqx401sdsx-neovim-0.3.4/bin/nvim
+bash-3.2$ nvim --version
+NVIM v0.3.4
+Build type: Release
+LuaJIT 2.1.0-beta3
+Compilation: 
+Compiled by nixbld4
+
+Features: +acl +iconv +jemalloc +tui 
+See &quot;:help feature-compile&quot;
+
+   system vimrc file: &quot;$VIM/sysinit.vim&quot;
+  fall-back for $VIM: &quot;
+/nix/store/ss977i3fkrna43g1pl1g3cx6lscj2b04-neovim-unwrapped-0.3.4/share/nvim&quot;
+
+Run :checkhealth for more info
+bash-3.2$ # Ok looks like it's been installed. Lets try to exit the shell
+bash-3.2$ exit
+exit
+$ which nvim
+$ # no more nvim on path
+$ ls /nix/store/ss977i3fkrna43g1pl1g3cx6lscj2b04-neovim-unwrapped-0.3.4/bin/nvim
+$ # binary still exists on the system
+$ /nix/store/ss977i3fkrna43g1pl1g3cx6lscj2b04-neovim-unwrapped-0.3.4/bin/nvim
+$ # could even run it, seemed ok, but :checkhealth reports errors with ruby and python, but this is to be expected as we're running the binary outside it's full environment
+</code></pre>
+
+<p>So I can create a new shell with the the package and it&rsquo;s dependencies installed. Cannot find a way to install the package though.</p>
+
+<p>After some searching it appears this is not possible with the new CLI. I guess it&rsquo;s truly not done.</p>
+
+<h1 id="tldr">TLDR</h1>
+
+<p>Don&rsquo;t use <code>nix</code>, use the <code>nix-*</code> commands.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="/posts/hello-world/">
+                <span class="button__text">Hello World</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">/dev/null</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

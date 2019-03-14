@@ -29,5 +29,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Nix</title>
+      <link>/tags/nix/</link>
+      <pubDate>Thu, 14 Mar 2019 18:37:53 +0100</pubDate>
+      
+      <guid>/tags/nix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ops</title>
+      <link>/tags/ops/</link>
+      <pubDate>Thu, 14 Mar 2019 18:37:53 +0100</pubDate>
+      
+      <guid>/tags/ops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Package Management</title>
+      <link>/tags/package-management/</link>
+      <pubDate>Thu, 14 Mar 2019 18:37:53 +0100</pubDate>
+      
+      <guid>/tags/package-management/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
