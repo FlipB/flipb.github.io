@@ -18,7 +18,7 @@
       
       <guid>/posts/hello-world/</guid>
       <description>This is the first post written with Hugo. If you are me and I have forgotten how to do update this page, well then, you&amp;rsquo;re in luck.
-# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # http://localhost:1313/ hugo server # ^c # create a new post hugo new content/posts/git-submodules-default-overrides.</description>
+# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # Note -D means it&#39;ll shoe Drafts # http://localhost:1313/ hugo server -D # ^c # create a new post hugo new content/posts/git-submodules-default-overrides.</description>
     </item>
     
   </channel>

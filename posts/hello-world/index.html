@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="This is the first post written with Hugo. If you are me and I have forgotten how to do update this page, well then, you&amp;rsquo;re in luck.
-# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # http://localhost:1313/ hugo server # ^c # create a new post hugo new content/posts/git-submodules-default-overrides."/>
+# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # Note -D means it&#39;ll shoe Drafts # http://localhost:1313/ hugo server -D # ^c # create a new post hugo new content/posts/git-submodules-default-overrides."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="/posts/hello-world/" />
@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Hello World :: /dev/null — screaming into the void" />
 <meta name="twitter:description" content="This is the first post written with Hugo. If you are me and I have forgotten how to do update this page, well then, you&amp;rsquo;re in luck.
-# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # http://localhost:1313/ hugo server # ^c # create a new post hugo new content/posts/git-submodules-default-overrides." />
+# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # Note -D means it&#39;ll shoe Drafts # http://localhost:1313/ hugo server -D # ^c # create a new post hugo new content/posts/git-submodules-default-overrides." />
 <meta name="twitter:site" content="/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
@@ -36,7 +36,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Hello World :: /dev/null — screaming into the void">
 <meta property="og:description" content="This is the first post written with Hugo. If you are me and I have forgotten how to do update this page, well then, you&amp;rsquo;re in luck.
-# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # http://localhost:1313/ hugo server # ^c # create a new post hugo new content/posts/git-submodules-default-overrides." />
+# clone blog repo git clone https://github.com/flipb/blog.git cd blog ## make sure the submodules get initialized, ## not sure if this requires non-defaults in git? This sounds like a good second post.. # Update post vim content/posts/hello-world.md # check it out (should probably start this in a different terminal) # Note -D means it&#39;ll shoe Drafts # http://localhost:1313/ hugo server -D # ^c # create a new post hugo new content/posts/git-submodules-default-overrides." />
 <meta property="og:url" content="/posts/hello-world/" />
 <meta property="og:site_name" content="Hello World" />
 <meta property="og:image" content="">
@@ -159,15 +159,16 @@ cd blog
 # Update post
 vim content/posts/hello-world.md
 # check it out (should probably start this in a different terminal)
+# Note -D means it'll shoe Drafts
 # http://localhost:1313/
-hugo server
+hugo server -D
 # ^c
 # create a new post
 hugo new content/posts/git-submodules-default-overrides.md
 # type out the new post
 vim content/posts/git-submodules-default-overrides.md
 # check it out 
-hugo server
+hugo server -D
 # commit and push
 git add .
 git commit -m &quot;Added: git submodule override post&quot;
