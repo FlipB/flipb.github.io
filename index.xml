@@ -6,10 +6,21 @@
     <description>Recent content on /dev/null</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Mar 2019 18:37:53 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2019 19:34:55 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tmux Scrolling</title>
+      <link>/posts/tmux-scrolling/</link>
+      <pubDate>Fri, 15 Mar 2019 19:34:55 +0100</pubDate>
+      
+      <guid>/posts/tmux-scrolling/</guid>
+      <description>Scrolling in tmux is best done with mouse-mode enabled, or in copy-mode.
+Before entering copy mode you should run the command :set-window-option mode-keys vi to let you scroll in copy-mode with C-u and C-d as well as J and K (Shift-j and Shift-k). To be able to enter commands in tmux you have to first press C-b.
+To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work for me (keyboard layout problems?</description>
+    </item>
     
     <item>
       <title>Nix package manager intro</title>

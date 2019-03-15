@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/tmux-scrolling/</loc>
+    <lastmod>2019-03-15T19:34:55+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/nix-pkg-mgr-intro/</loc>
     <lastmod>2019-03-14T18:37:53+01:00</lastmod>
   </url>
@@ -14,7 +19,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-14T18:37:53+01:00</lastmod>
+    <lastmod>2019-03-15T19:34:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,13 +60,19 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-03-14T18:37:53+01:00</lastmod>
+    <lastmod>2019-03-15T19:34:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2019-03-06T19:18:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tmux/</loc>
+    <lastmod>2019-03-15T19:34:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
