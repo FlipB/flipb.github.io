@@ -6,13 +6,24 @@
     <description>Recent content on /dev/null</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Mar 2019 19:34:55 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 23:11:54 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Tmux Scrolling</title>
+      <title>Rust Cross Compile for Linux</title>
+      <link>/posts/rust-cross-compile-for-linux/</link>
+      <pubDate>Sat, 27 Apr 2019 23:11:54 +0200</pubDate>
+      
+      <guid>/posts/rust-cross-compile-for-linux/</guid>
+      <description>Unlike go, which relies on direct syscalls for integrations, rust instead relies on libc. Because rust links to libc, cross compiling is a little bit annoying - we need a c linker and a libc to link against.
+The simplest way I&amp;rsquo;ve found to cross compile rust for linux is by the procedure detailed below.
+# install the rust musl libc target $ rustup target add x86_64-unknown-linux-musl # the command below will compile the &amp;quot;main&amp;quot; binary (as named in `Cargo.</description>
+    </item>
+    
+    <item>
+      <title>Tmux scrolling and basic usage</title>
       <link>/posts/tmux-scrolling/</link>
       <pubDate>Fri, 15 Mar 2019 19:34:55 +0100</pubDate>
       

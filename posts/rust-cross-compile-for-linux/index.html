@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   
-    <title>Tmux scrolling and basic usage :: /dev/null — screaming into the void</title>
+    <title>Rust Cross Compile for Linux :: /dev/null — screaming into the void</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Scrolling in tmux is best done with mouse-mode enabled, or in copy-mode.
-Before entering copy mode you should run the command :set-window-option mode-keys vi to let you scroll in copy-mode with C-u and C-d as well as J and K (Shift-j and Shift-k). To be able to enter commands in tmux you have to first press C-b.
-To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work for me (keyboard layout problems?"/>
+<meta name="description" content="Unlike go, which relies on direct syscalls for integrations, rust instead relies on libc. Because rust links to libc, cross compiling is a little bit annoying - we need a c linker and a libc to link against.
+The simplest way I&amp;rsquo;ve found to cross compile rust for linux is by the procedure detailed below.
+# install the rust musl libc target $ rustup target add x86_64-unknown-linux-musl # the command below will compile the &amp;quot;main&amp;quot; binary (as named in `Cargo."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="/posts/tmux-scrolling/" />
+<link rel="canonical" href="/posts/rust-cross-compile-for-linux/" />
 
 
 <link rel="stylesheet" href="/assets/style.css">
@@ -25,10 +25,10 @@ To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Tmux scrolling and basic usage :: /dev/null — screaming into the void" />
-<meta name="twitter:description" content="Scrolling in tmux is best done with mouse-mode enabled, or in copy-mode.
-Before entering copy mode you should run the command :set-window-option mode-keys vi to let you scroll in copy-mode with C-u and C-d as well as J and K (Shift-j and Shift-k). To be able to enter commands in tmux you have to first press C-b.
-To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work for me (keyboard layout problems?" />
+<meta name="twitter:title" content="Rust Cross Compile for Linux :: /dev/null — screaming into the void" />
+<meta name="twitter:description" content="Unlike go, which relies on direct syscalls for integrations, rust instead relies on libc. Because rust links to libc, cross compiling is a little bit annoying - we need a c linker and a libc to link against.
+The simplest way I&amp;rsquo;ve found to cross compile rust for linux is by the procedure detailed below.
+# install the rust musl libc target $ rustup target add x86_64-unknown-linux-musl # the command below will compile the &amp;quot;main&amp;quot; binary (as named in `Cargo." />
 <meta name="twitter:site" content="/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
@@ -36,17 +36,17 @@ To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Tmux scrolling and basic usage :: /dev/null — screaming into the void">
-<meta property="og:description" content="Scrolling in tmux is best done with mouse-mode enabled, or in copy-mode.
-Before entering copy mode you should run the command :set-window-option mode-keys vi to let you scroll in copy-mode with C-u and C-d as well as J and K (Shift-j and Shift-k). To be able to enter commands in tmux you have to first press C-b.
-To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work for me (keyboard layout problems?" />
-<meta property="og:url" content="/posts/tmux-scrolling/" />
-<meta property="og:site_name" content="Tmux scrolling and basic usage" />
+<meta property="og:title" content="Rust Cross Compile for Linux :: /dev/null — screaming into the void">
+<meta property="og:description" content="Unlike go, which relies on direct syscalls for integrations, rust instead relies on libc. Because rust links to libc, cross compiling is a little bit annoying - we need a c linker and a libc to link against.
+The simplest way I&amp;rsquo;ve found to cross compile rust for linux is by the procedure detailed below.
+# install the rust musl libc target $ rustup target add x86_64-unknown-linux-musl # the command below will compile the &amp;quot;main&amp;quot; binary (as named in `Cargo." />
+<meta property="og:url" content="/posts/rust-cross-compile-for-linux/" />
+<meta property="og:site_name" content="Rust Cross Compile for Linux" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2019-03-15 19:34:55 &#43;0100 CET" />
+<meta property="article:published_time" content="2019-04-27 23:11:54 &#43;0200 CEST" />
 
 
 
@@ -124,11 +124,11 @@ To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work 
   <div class="content">
     
   <div class="post">
-    <h2 class="post-title"><a href="/posts/tmux-scrolling/">Tmux scrolling and basic usage</a></h2>
+    <h2 class="post-title"><a href="/posts/rust-cross-compile-for-linux/">Rust Cross Compile for Linux</a></h2>
     <div class="post-meta">
       
         <span class="post-date">
-            2019-03-15
+            2019-04-27
         </span>
       
       
@@ -140,7 +140,13 @@ To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work 
     
       <span class="post-tags">
         
-          #<a href="/tags/tmux">tmux</a>&nbsp;
+          #<a href="/tags/rust">rust</a>&nbsp;
+        
+          #<a href="/tags/cross-compiling">cross-compiling</a>&nbsp;
+        
+          #<a href="/tags/compiling">compiling</a>&nbsp;
+        
+          #<a href="/tags/code">code</a>&nbsp;
         
       </span>
     
@@ -148,13 +154,33 @@ To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work 
     
 
     <div class="post-content">
-      <p>Scrolling in tmux is best done with mouse-mode enabled, or in copy-mode.</p>
+      <p>Unlike go, which relies on direct syscalls for integrations, rust instead relies on libc.
+Because rust links to libc, cross compiling is a little bit annoying - we need a c linker and a libc to link against.</p>
 
-<p>Before entering copy mode you should run the command <code>:set-window-option mode-keys vi</code> to let you scroll in copy-mode with C-u and C-d as well as J and K (Shift-j and Shift-k). To be able to enter commands in tmux you have to first press <code>C-b</code>.</p>
+<p>The simplest way I&rsquo;ve found to cross compile rust for linux is by the procedure detailed below.</p>
 
-<p>To enter copy-mode you should do <code>C-b [</code>, but this doesn&rsquo;t seem to work for me (keyboard layout problems?). Instead I just do <code>C-b</code> then type the command <code>:copy-mode</code>.</p>
+<pre><code class="language-bash"># install the rust musl libc target
+$ rustup target add x86_64-unknown-linux-musl
 
-<p>Enter mouse mode with the command <code>:mouse on</code>. You probably want to add <code>set mouse on</code> to your tmux.config file.</p>
+# the command below will compile the &quot;main&quot; binary (as named in `Cargo.toml`)
+# for the specified target we just installed (x86_64-unknown-linux-musl)
+# with optimizations enabled (release mode)
+# and using the built in rust-lld linker
+$ cargo rustc --bin main --target x86_64-unknown-linux-musl --release  -- -C linker=rust-lld
+
+# lets inspect the output binary
+$ file ./target/x86_64-unknown-linux-musl/release/main
+./target/x86_64-unknown-linux-musl/release/main: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
+
+$ readelf -d ./target/x86_64-unknown-linux-musl/release/main
+
+There is no dynamic section in this file.
+
+## it seems there's no dynamically linked libs, so musl libc was statically linked!
+# then we should be able to use the static binary on glibc based system no problems!
+</code></pre>
+
+<p>I&rsquo;ve also tried this with the ARMv6 target (arm-unknown-linux-musleabihf) for the first generation raspberry pi, and that seems to work equally well.</p>
 
     </div>
     
@@ -165,17 +191,10 @@ To enter copy-mode you should do C-b [, but this doesn&amp;rsquo;t seem to work 
         </div>
         <div class="pagination__buttons">
           
-            <span class="button previous">
-              <a href="/posts/rust-cross-compile-for-linux/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Rust Cross Compile for Linux</span>
-              </a>
-            </span>
-          
           
             <span class="button next">
-              <a href="/posts/nix-pkg-mgr-intro/">
-                <span class="button__text">Nix package manager intro</span>
+              <a href="/posts/tmux-scrolling/">
+                <span class="button__text">Tmux scrolling and basic usage</span>
                 <span class="button__icon">→</span>
               </a>
             </span>

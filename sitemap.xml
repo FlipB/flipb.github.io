@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/rust-cross-compile-for-linux/</loc>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/tmux-scrolling/</loc>
     <lastmod>2019-03-15T19:34:55+01:00</lastmod>
   </url>
@@ -19,12 +24,30 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-15T19:34:55+01:00</lastmod>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/code/</loc>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/compiling/</loc>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cross-compiling/</loc>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,13 +83,19 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-03-15T19:34:55+01:00</lastmod>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rust/</loc>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-03-06T19:18:44+01:00</lastmod>
+    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
     <priority>0</priority>
   </url>
   
