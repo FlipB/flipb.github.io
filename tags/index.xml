@@ -6,10 +6,19 @@
     <description>Recent content in Tags on /dev/null</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Apr 2019 23:11:54 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2019 20:59:46 +0200</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chip</title>
+      <link>/tags/chip/</link>
+      <pubDate>Mon, 29 Apr 2019 20:59:46 +0200</pubDate>
+      
+      <guid>/tags/chip/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Code</title>
@@ -35,6 +44,15 @@
       <pubDate>Sat, 27 Apr 2019 23:11:54 +0200</pubDate>
       
       <guid>/tags/cross-compiling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flashing</title>
+      <link>/tags/flashing/</link>
+      <pubDate>Mon, 29 Apr 2019 20:59:46 +0200</pubDate>
+      
+      <guid>/tags/flashing/</guid>
       <description></description>
     </item>
     
@@ -66,6 +84,15 @@
     </item>
     
     <item>
+      <title>Ntc</title>
+      <link>/tags/ntc/</link>
+      <pubDate>Mon, 29 Apr 2019 20:59:46 +0200</pubDate>
+      
+      <guid>/tags/ntc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ops</title>
       <link>/tags/ops/</link>
       <pubDate>Thu, 14 Mar 2019 18:37:53 +0100</pubDate>
@@ -89,6 +116,15 @@
       <pubDate>Sat, 27 Apr 2019 23:11:54 +0200</pubDate>
       
       <guid>/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sdk</title>
+      <link>/tags/sdk/</link>
+      <pubDate>Mon, 29 Apr 2019 20:59:46 +0200</pubDate>
+      
+      <guid>/tags/sdk/</guid>
       <description></description>
     </item>
     

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/nextthing-chip-resurrection/</loc>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/rust-cross-compile-for-linux/</loc>
     <lastmod>2019-04-27T23:11:54+02:00</lastmod>
   </url>
@@ -24,12 +29,18 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/chip/</loc>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -52,6 +63,12 @@
   </url>
   
   <url>
+    <loc>/tags/flashing/</loc>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/hugo/</loc>
     <lastmod>2019-03-06T19:18:44+01:00</lastmod>
     <priority>0</priority>
@@ -70,6 +87,12 @@
   </url>
   
   <url>
+    <loc>/tags/ntc/</loc>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ops/</loc>
     <lastmod>2019-03-14T18:37:53+01:00</lastmod>
     <priority>0</priority>
@@ -83,7 +106,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -94,8 +117,14 @@
   </url>
   
   <url>
+    <loc>/tags/sdk/</loc>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
-    <lastmod>2019-04-27T23:11:54+02:00</lastmod>
+    <lastmod>2019-04-29T20:59:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   

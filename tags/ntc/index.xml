@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ntc on /dev/null</title>
+    <link>/tags/ntc/</link>
+    <description>Recent content in Ntc on /dev/null</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Apr 2019 20:59:46 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/ntc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nextthing Chip Resurrection</title>
+      <link>/posts/nextthing-chip-resurrection/</link>
+      <pubDate>Mon, 29 Apr 2019 20:59:46 +0200</pubDate>
+      
+      <guid>/posts/nextthing-chip-resurrection/</guid>
+      <description>I had to reset my NextThing Co C.H.I.P. because I had lost access. This turned out to be a lot more fun than expected.
+NextThing as a company is no more, their docs and github repo&amp;rsquo;s are gone. So how can we flash out Chip?
+First things first - there&amp;rsquo;s a docs mirror at http://chip.jfpossibilities.com/docs/chip.html#flash-chip-firmware
+Do not bother trying to get the official SDK up an running, because after hours of trying and finally getting it all to work, it still doesn&amp;rsquo;t work.</description>
+    </item>
+    
+  </channel>
+</rss>
